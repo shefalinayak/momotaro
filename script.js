@@ -2,22 +2,24 @@
 
 function toggleVisibility(yesOptions,noOptions) {
 	'use strict';
-	for( var i = 0; i < yesOptions.length; i++) {
-		var good = document.getElementById(yesOptions[i]);
-		good.style.display = 'block';
-	}
 	for( var j = 0; j < noOptions.length; j++) {
 		var bad = document.getElementById(noOptions[j]);
 		bad.style.display = 'none';
+	}
+	for( var i = 0; i < yesOptions.length; i++) {
+		var good = document.getElementById(yesOptions[i]);
+		//good.style.display = 'block';
+		$('#'+yesOptions[i]).fadeIn(1000);
 	}
 }
 
 function toggleVis(yesOption,noOption) {
 	'use strict';
-	var good = document.getElementById(yesOption);
-	good.style.display = 'block';
 	var bad = document.getElementById(noOption);
 	bad.style.display = 'none';
+	var good = document.getElementById(yesOption);
+	//good.style.display = 'block';
+	$('#'+yesOption).fadeIn(1000);
 }
 
 function hideAll() {
@@ -36,7 +38,9 @@ $(document).ready(function() {
 		navigationPosition: 'right',
 		slidesNavigation: true,
 		slidesNavPosition: 'bottom',
-		controlArrows: false,
+		controlArrows: true,
 		loopHorizontal: true,
+		scrollOverflow: true,
+		css3: false,
 	});
 });

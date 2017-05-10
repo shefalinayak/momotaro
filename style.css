@@ -8,11 +8,14 @@
 
 .section{
 	background-color: peachpuff;
+	background-image: url("linepeach.gif");
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 section {
 	margin: auto;
-	width: 80%;
+	width: 60%;
 	padding: 10px;
 	font-family: 'Kaushan Script', cursive, 'Open Sans', sans-serif;
 }
@@ -37,15 +40,29 @@ section {
 	text-align: center;
 }
 
-#part2{
-	background-image: url("momotaro kanji bg.png");
+#part2 {
+	background-image: url("kanjibg.png");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#kibidango {
+	background-image: url("kibidango.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#onigashima {
+	background-image: url('megijima.jpg');
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 button {
 	background-color: rgba(255,255,255,0.4);
 	border: 1px solid black;
 	padding: 5px 15px;
-	margin: 30px;
+	margin: 15px;
 	height: 50px;
 	font-family: 'Kaushan Script', cursive;
 	font-size: 20px;
@@ -53,6 +70,13 @@ button {
 
 button:hover {
 	background-color: rgba(255,255,255,0.8);
+	color: blackl
+}
+
+button:active {
+	background-color: rgba(255,255,255,0.8);
+	transform: translateY(4px);
+	color: black;
 }
 
 body {
@@ -69,13 +93,13 @@ h1 {
 	font-size: 90px;
 }
 
-a {
+a, li {
 	font-family: 'Open Sans', sans-serif;
 	color: black;
 }
 
 h2 {
-	font-size: 70px;
+	font-size: 90px;
 }
 
 h4 {
