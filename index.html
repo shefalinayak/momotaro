@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css"/>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="fullPage.js-master/vendors/scrolloverflow.js"></script>
 <script type="text/javascript" src="fullPage.js-master/jquery.fullPage.js"></script>
 <script src="script.js"></script>
 
@@ -47,13 +48,13 @@
 
 <div class="section" id="part3">
 <section class="options">
-	<button onclick="toggleVis('fast','really fast')">The fast version</button>
-	<button onclick="toggleVis('really fast','fast')">The really fast version</button>
+	<button onclick="toggleVis('fast','faster')">The fast version</button>
+	<button onclick="toggleVis('faster','fast')">The really fast version</button>
 </section>
 
 <section class="story">
 	<p id="fast" class="optional">The years passed quickly, and Momotaro grew into a fine, 15-year-old boy. He was strong and tall.</p>
-	<p id="really fast" class="optional">Momotaro grew up quickly. Really quickly, actually. If he ate one cup of rice, he grew one cup taller; if he ate two cups, he grew two cups taller. His growth probably slowed down after a while, but it wasn’t long before he was taller and stronger than the rest of the boys his age. Soon he was able to help his parents with everything from household tasks to mountain work.</p>
+	<p id="faster" class="optional">Momotaro grew up quickly. Really quickly, actually. If he ate one cup of rice, he grew one cup taller; if he ate two cups, he grew two cups taller. His growth probably slowed down after a while, but it wasn’t long before he was taller and stronger than the rest of the boys his age. Soon he was able to help his parents with everything from household tasks to mountain work.</p>
 </section>
 
 <section class="options">
@@ -74,24 +75,25 @@
 </section>
 
 <section class="options">
-	<button onclick="toggleVis('volunteer','voted')">Volunteer</button>
-	<button onclick="toggleVis('voted','volunteer')">Voted Out</button>
+	<button onclick="toggleVisibility(['volunteer','gifts'],['voted'])">Volunteer</button>
+	<button onclick="toggleVisibility(['voted','gifts'],['volunteer'])">Voted Out</button>
 </section>
 
 <section class="story">
 	<p id="volunteer" class="optional">Over time Momotaro had grown bored. He yearned for adventure, and as the threat of the demons loomed over the village, one day he approached his parents. “Thank you for raising me as your son,” he told them, “but I need to leave for the Island of Demons and defeat those that plague our land.”</p>
 	<p id="voted" class="optional">Running out of options, the townspeople pushed Momotaro go fight the demons. If anyone could do it, he could.</p>
-	<p>Momotaro’s parents were a little surprised, but also proud. The gods had sent Momotaro to them and they believed he was destined for great things. To prepare him for the journey, they made him a new kimono and a flag, and gave him a sword to fight with. Most importantly, they made him the most amazing, magical millet dumplings in Japan to take with him on his journey.</p>
+	<p id="gifts" class="optional">Momotaro’s parents were a little surprised, but also proud. The gods had sent Momotaro to them and they believed he was destined for great things. To prepare him for the journey, they made him a new kimono and a flag, and gave him a sword to fight with. Most importantly, they made him the most amazing, magical millet dumplings in Japan to take with him on his journey.</p>
 </section>
 </div>
 <div class="slide" id="onigashima" style="background-image: url('megijima.jpg'); background-size: cover;">
 <section class="info">
-	<p>Literally “Island of Demons”, Onigashima has a real-world counterpart called Megishima in the Sea of Japan. If you climb (or take a bus) all the way to the top, you can enter the demons’ cave.</p>
+	<p>Some versions of the story describe Onigashima, literally the 'Island of Demons', as a lush, tropical paradise where the demons spent their days without a worry in the world. An island called Megijima in the Sea of Japan is sometimes said to be the Onigashima of the Momotaro legend. If you climb (or take a bus) all the way to the top, you can enter the demons’ cave.</p>
+  <p>The 'demons' on a distant island might also have been referring to people from foreign islands or lands. The image of foreigners as the demons in the story was especially prevalent during World War II, when the story of Momotaro was used to promote nationalist ideals.</p>
 </section>
 </div>
 <div class="slide" id="kibidango">
 <section class="info">
-	<p>The Japanese name for millet dumplings is kibi-dango. Though they are advertised with their connection to the legend of Momotaro, the kibi-dango that Okayama is known for today is a sweet confection that uses little to no millet.</p>
+	<p>The Japanese name for millet dumplings is kibi-dango. The kibidango that Okayama is known for today is actually a sweet confection that uses little to no millet, but the connection to Momotaro is hyped up and used in a lot of kibidango packaging as advertisement.</p>
 </section>
 </div>
 </div>
@@ -137,14 +139,14 @@
 
 <div class="section">
 <section class="options">
-	<button onclick="toggleVis('skill','millet')">The Strongest Team</button>
-	<button onclick="toggleVis('millet','skill')">Power Meals</button>
+	<button onclick="toggleVisibility(['skill','surrender'],['millet'])">The Strongest Team</button>
+	<button onclick="toggleVisibility(['millet','surrender'],['skill'])">Power Meals</button>
 </section>
 
 <section class="story">
 	<p id="skill" class="optional">The demons could hardly believe that they were losing to just four warriors. The four companions fought with the strength of a hundred warriors, and quickly defeated all the demons but the Demon King.</p>
 	<p id="millet" class="optional">The millet dumplings gave each companion the power to fight with the strength of a hundred warriors, and they easily defeated all the demons (listen, kids—eat well so you can be as strong as Momotaro). Victorious, they approached the Demon King.</p>
-	<p>Having just seen these great warriors defeat the rest of his demons, the Demon King immediately surrendered to Momotaro. “Please have mercy, o great warrior!” the Demon King cried. “Spare me, and I will return all the treasure and release my prisoners! I promise never to be wicked again!”</p>
+	<p id="surrender" class="optional">Having just seen these great warriors defeat the rest of his demons, the Demon King immediately surrendered to Momotaro. “Please have mercy, o great warrior!” the Demon King cried. “Spare me, and I will return all the treasure and release my prisoners! I promise never to be wicked again!”</p>
 </section>
 
 <section class="options">
@@ -185,21 +187,24 @@
 <section id="credits">
 	<h4>Sources</h4>
 	<ul>
-		<li><a href="http://www.aozora.gr.jp/cards/001813/files/56878_57891.html">Japanese v1</a></li>
-		<li><a href="http://www.aozora.gr.jp/cards/000879/files/100_15253.html">Japanese v2</a></li>
-		<li><a href="http://www.aozora.gr.jp/cards/000329/files/18376_12100.html">Japanese v3</a></li>
-		<li><a href="http://life.ou.edu/stories/momotarou.html">Japanese/English</a></li>
+		<li><a href="http://www.aozora.gr.jp/cards/000879/files/100_15253.html">Japanese v1</a>: in my opinion, the most interesting version by far. Lots of interesting details that aren't in other versions.</li>
+		<li><a href="http://www.aozora.gr.jp/cards/000329/files/18376_12100.html">Japanese v2</a></li>
+    <li><a href="http://www.aozora.gr.jp/cards/001813/files/56878_57891.html">Japanese v3</a></li>
+    <li><a href="http://life.ou.edu/stories/momotarou.html">Japanese/English</a></li>
 		<li><a href="http://www.pitt.edu/~dash/japan.html#peachling">English v1</a></li>
-		<li><a href="http://etc.usf.edu/lit2go/72/japanese-fairy-tales/4845/momotaro-or-the-story-of-the-son-of-a-peach/">English v2</a></li>
-		<li><a href="https://en.wikipedia.org/wiki/Momotarō">English v3</a></li>
+		<li><a href="http://etc.usf.edu/lit2go/72/japanese-fairy-tales/4845/momotaro-or-the-story-of-the-son-of-a-peach/">English v2</a>: my favorite English version; very descriptive</li>
 		<li><a href="https://www.candlelightstories.com/2011/03/13/peach-boy-a-folktale-from-japan/">English v4</a></li>
 		<li><a href="http://www.red-herring.com.au/The%20Story%20of%20Momotaro%20the%20Peach%20Boy.pdf">English v5</a></li>
 		<li><a href="https://japanesemythology.wordpress.com/momotaro-the-peach-boy/">English v6</a></li>
-		<li><a href="http://www.kibitsuhiko.or.jp/about.html">Kibitsuhiko Shrine</a></li>
-		<li><a href="https://nirc.nanzan-u.ac.jp/nfile/1643">Momotaro as Nationalism</a></li>
-		<li><a href="http://d-scholarship.pitt.edu/10422/">Change and Continuity in Momotaro Legend</a></li>
-		<li><a href="https://www.okayama-japan.jp/">Okayama, Japan</a></li>
+		<li><a href="http://d-scholarship.pitt.edu/10422/">Change and Continuity of Momotaro</a>: interesting overview of how the story changed over time</li>
+    <li><a href="http://www.kibitsuhiko.or.jp/about.html">Kibitsuhiko Shrine</a></li>
+    <li><a href="https://nirc.nanzan-u.ac.jp/nfile/1643">Momotaro as Nationalism</a></li>
 	</ul>
+  <h4>Credits</h4>
+  <ul>
+    <li>Peach background by Linseed Studio from the Noun Project</li>
+    <li><a href="https://www.okayama-japan.jp/">Okayama, Japan</a>: photos of peaches</li>
+  </ul>
 </section>
 </div>
 </div>
