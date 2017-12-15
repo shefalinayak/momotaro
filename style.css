@@ -8,7 +8,7 @@
 
 .section{
 	background-color: peachpuff;
-	background-image: url("linepeach.gif");
+	background-image: url("images/linepeach.gif");
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -41,19 +41,19 @@ section {
 }
 
 #part2 {
-	background-image: url("kanjibg.png");
+	background-image: url("images/kanjibg.png");
 	background-size: cover;
 	background-attachment: fixed;
 }
 
 #kibidango {
-	background-image: url("kibidango.jpg");
+	background-image: url("images/kibidango.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
 
 #onigashima {
-	background-image: url('megijima.jpg');
+	background-image: url('images/megijima.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -70,7 +70,7 @@ button {
 
 button:hover {
 	background-color: rgba(255,255,255,0.8);
-	color: blackl
+	color: black;
 }
 
 button:active {
