@@ -13,15 +13,15 @@ var height = 600;
 var player = {
   x : width/2,
   y : height - 5,
-  width : 5,
-  height : 5,
+  width : 10,
+  height : 10,
   speed: 3,
   velX: 0,
   velY: 0,
   jumping: false
 };
 var friction = 0.8;
-var gravity = 0.3;
+var gravity = 0.2;
 var keys = [];
 
 canvas.width = width;
@@ -93,7 +93,9 @@ function update(){
 
   // draw our player
   ctx.clearRect(0,0,width,height);
-  ctx.fillStyle = "red";
+  ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+  ctx.fillRect(0,0,width,height);
+  ctx.fillStyle = "brown";
   ctx.fillRect(player.x, player.y, player.width, player.height);
   // run through the loop again
   requestAnimationFrame(update);
